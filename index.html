@@ -2,31 +2,94 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>TruePic Gallery</title>
   <style>
-    body { font-family: sans-serif; text-align: center; background: #f9f9f9; }
-    h1 { font-size: 2em; margin: 20px; }
-    .gallery { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
-    .card { width: 300px; overflow: hidden; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); background: white; }
-    .card img { width: 100%; height: 200px; object-fit: cover; }
-    .card h3 { margin: 10px; }
-    .card p { color: gray; margin-bottom: 10px; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f3f4f6;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin: 2rem 0 1rem;
+      color: #111827;
+    }
+    p {
+      color: #6b7280;
+      margin-bottom: 2rem;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.02);
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .card h3 {
+      margin: 10px;
+      font-size: 1.2rem;
+      color: #111827;
+    }
+    .card p {
+      color: #6b7280;
+      margin-bottom: 15px;
+    }
   </style>
 </head>
 <body>
   <h1>TruePic Gallery</h1>
+  <p>Explore our professional photography collection</p>
+
   <div class="gallery">
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80" alt="">
+      <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80" alt="Wedding">
       <h3>Wedding Photography</h3>
       <p>Wedding</p>
     </div>
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=800&q=80" alt="">
+      <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=800&q=80" alt="Portrait">
       <h3>Portrait Photography</h3>
       <p>Portrait</p>
     </div>
-    <!-- وهكذا لباقي الصور... -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1496509218134-fad73128e572?auto=format&fit=crop&w=800&q=80" alt="Nature">
+      <h3>Nature Photography</h3>
+      <p>Nature</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&w=800&q=80" alt="Product">
+      <h3>Product Photography</h3>
+      <p>Product</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1551316679-9c6ae9dec224?auto=format&fit=crop&w=800&q=80" alt="Street">
+      <h3>Street Photography</h3>
+      <p>Street</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1469594292607-7bd90f8d3ba4?auto=format&fit=crop&w=800&q=80" alt="Landscape">
+      <h3>Landscape Photography</h3>
+      <p>Landscape</p>
+    </div>
   </div>
 </body>
 </html>
